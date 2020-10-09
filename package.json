@@ -1,0 +1,27 @@
+{
+  "name": "old-icelandic-zoega",
+  "version": "1.0.0",
+  "description": "Old Icelandic dictionary for Node.js. From 'A Concise Dictionary of Old Icelandic' by Geir Zoëga",
+  "main": "index.js",
+  "repository": "https://github.com/stscoundrel/old-icelandic-zoega.git",
+  "author": "stscoundrel <silvennoinen.sampo@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "jest": "^26.4.2"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "test": "jest --verbose --runInBand --passWithNoTests",
+    "prepublishOnly": "npm test"
+  }
+}
