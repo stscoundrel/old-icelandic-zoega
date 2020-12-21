@@ -10,11 +10,11 @@ describe('Dictionary: with formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getDictionary()
 
-    expect(result[14].word).toBe('aðalhending')
-    expect(result[14].definitions[0]).toBe('f. <i>full</i> or <i>perfect rhyme</i>, as <i>góð: blóð</i> (opposed to skothending).')
+    expect(result[14].word).toBe('áblásning')
+    expect(result[14].definitions[1]).toBe('1) <i>breathing upon</i> (með elds á.);')
 
-    expect(result[25000].word).toBe('tvímæli')
-    expect(result[25000].definitions[0]).toBe('n. <i>doubt, discordant report</i>.')
+    expect(result[25000].word).toBe('traust')
+    expect(result[25000].definitions[1]).toBe('1) <i>help, protection, support</i> (hingat em ek kominn at sœkja heilræði at þér ok t.); ek hefi lítil t. undir mér, <i>small power, authority</i>;')
   })
 
   test('Dictionary contains 29 951 words', () => {
@@ -43,11 +43,11 @@ describe('Dictionary: without formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getNoMarkupDictionary()
 
-    expect(result[14].word).toBe('aðalhending')
-    expect(result[14].definitions[0]).toBe('f. full or perfect rhyme, as góð: blóð (opposed to skothending).')
+    expect(result[14].word).toBe('áblásning')
+    expect(result[14].definitions[1]).toBe('1) breathing upon (með elds á.);')
 
-    expect(result[25000].word).toBe('tvímæli')
-    expect(result[25000].definitions[0]).toBe('n. doubt, discordant report.')
+    expect(result[25000].word).toBe('traust')
+    expect(result[25000].definitions[1]).toBe('1) help, protection, support (hingat em ek kominn at sœkja heilræði at þér ok t.); ek hefi lítil t. undir mér, small power, authority;')
   })
 
   test('Dictionary entries do not contain HTML markup.', () => {
