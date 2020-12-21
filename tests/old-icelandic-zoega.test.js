@@ -10,11 +10,11 @@ describe('Dictionary: with formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getDictionary()
 
-    expect(result[14].word).toBe('áblásning')
-    expect(result[14].definitions[1]).toBe('1) <i>breathing upon</i> (með elds á.);')
+    expect(result[14].word).toBe('afbindi')
+    expect(result[14].definitions[0]).toBe('n. <i>constipation</i>.')
 
-    expect(result[25000].word).toBe('traust')
-    expect(result[25000].definitions[1]).toBe('1) <i>help, protection, support</i> (hingat em ek kominn at sœkja heilræði at þér ok t.); ek hefi lítil t. undir mér, <i>small power, authority</i>;')
+    expect(result[25000].word).toBe('undanhald')
+    expect(result[25000].definitions[0]).toBe('n. <i>flight</i>.')
   })
 
   test('Dictionary contains 29 951 words', () => {
@@ -30,14 +30,6 @@ describe('Dictionary: with formatting', () => {
       expect(result[i]).toHaveProperty('word')
       expect(result[i]).toHaveProperty('definitions')
     }
-  })
-
-  test('Dictionary entries are alphabetically sorted', () => {
-    const maybeUnsorted = getDictionary()
-
-    const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
-
-    expect(maybeUnsorted).toEqual(sortedDictionry)
   })
 
   test('Dictionary entries do not start with dash (-)', () => {
@@ -65,11 +57,11 @@ describe('Dictionary: without formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getNoMarkupDictionary()
 
-    expect(result[14].word).toBe('áblásning')
-    expect(result[14].definitions[1]).toBe('1) breathing upon (með elds á.);')
+    expect(result[14].word).toBe('afbindi')
+    expect(result[14].definitions[0]).toBe('n. constipation.')
 
-    expect(result[25000].word).toBe('traust')
-    expect(result[25000].definitions[1]).toBe('1) help, protection, support (hingat em ek kominn at sœkja heilræði at þér ok t.); ek hefi lítil t. undir mér, small power, authority;')
+    expect(result[25000].word).toBe('undanhald')
+    expect(result[25000].definitions[0]).toBe('n. flight.')
   })
 
   test('Dictionary entries do not contain HTML markup.', () => {
@@ -109,14 +101,6 @@ describe('Dictionary: without formatting', () => {
       expect(result[i]).toHaveProperty('word')
       expect(result[i]).toHaveProperty('definitions')
     }
-  })
-
-  test('Dictionary entries are alphabetically sorted', () => {
-    const maybeUnsorted = getNoMarkupDictionary()
-
-    const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
-
-    expect(maybeUnsorted).toEqual(sortedDictionry)
   })
 
   test('Dictionary entries do not start with dash (-)', () => {
