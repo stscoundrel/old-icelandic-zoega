@@ -31,6 +31,28 @@ describe('Dictionary: with formatting', () => {
       expect(result[i]).toHaveProperty('definitions')
     }
   })
+
+  test('Dictionary entries are alphabetically sorted', () => {
+    const maybeUnsorted = getDictionary()
+
+    const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
+
+    expect(maybeUnsorted).toEqual(sortedDictionry)
+  })
+
+  test('Dictionary entries do not start with dash (-)', () => {
+    const dictionary = getDictionary()
+
+    let hasDashStarts = false
+
+    dictionary.forEach((entry) => {
+      if (entry.word.charAt(0) === '-') {
+        hasDashStarts = true
+      }
+    })
+
+    expect(hasDashStarts).toBeFalsy()
+  })
 })
 
 describe('Dictionary: without formatting', () => {
@@ -87,5 +109,27 @@ describe('Dictionary: without formatting', () => {
       expect(result[i]).toHaveProperty('word')
       expect(result[i]).toHaveProperty('definitions')
     }
+  })
+
+  test('Dictionary entries are alphabetically sorted', () => {
+    const maybeUnsorted = getNoMarkupDictionary()
+
+    const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
+
+    expect(maybeUnsorted).toEqual(sortedDictionry)
+  })
+
+  test('Dictionary entries do not start with dash (-)', () => {
+    const dictionary = getNoMarkupDictionary()
+
+    let hasDashStarts = false
+
+    dictionary.forEach((entry) => {
+      if (entry.word.charAt(0) === '-') {
+        hasDashStarts = true
+      }
+    })
+
+    expect(hasDashStarts).toBeFalsy()
   })
 })
