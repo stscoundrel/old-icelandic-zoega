@@ -1,6 +1,6 @@
 {
   "name": "old-icelandic-zoega",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Old Icelandic dictionary for Node.js. From 'A Concise Dictionary of Old Icelandic' by Geir Zoëga",
   "main": "index.js",
   "repository": "https://github.com/stscoundrel/old-icelandic-zoega.git",
@@ -22,6 +22,6 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "test": "jest --verbose --runInBand --passWithNoTests",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm lint && npm test"
   }
 }
