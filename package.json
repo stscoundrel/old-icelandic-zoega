@@ -2,26 +2,44 @@
   "name": "old-icelandic-zoega",
   "version": "1.1.4",
   "description": "Old Icelandic dictionary for Node.js. From 'A Concise Dictionary of Old Icelandic' by Geir Zoëga",
-  "main": "index.js",
   "repository": "https://github.com/stscoundrel/old-icelandic-zoega.git",
   "author": "stscoundrel <silvennoinen.sampo@gmail.com>",
   "license": "MIT",
   "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=12.0.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^7.27.0",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "babel-jest": "^27.3.1",
+    "eslint": "^8.1.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.3",
-    "eslint-plugin-jest": "^24.3.6",
-    "jest": "^27.0.3"
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
   },
   "scripts": {
     "lint": "eslint .",
     "fix": "eslint . --fix",
-    "test": "jest --verbose --runInBand --passWithNoTests",
-    "prepublishOnly": "yarn lint && yarn test"
+    "jest": "jest --verbose --runInBand --passWithNoTests",
+    "test:unit": "yarn jest",
+    "test:coverage": "jest --coverage --coverageThreshold='{\"global\":{\"statements\":\"90\", \"functions\":\"90\", \"branches\":\"90\", \"lines\":\"90\"}}'",
+    "build": "tsc",
+    "prepublishOnly": "yarn build && yarn test:unit"
   }
 }
