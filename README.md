@@ -1,8 +1,12 @@
 # Old Icelandic Zoega
 
-Old Icelandic dictionary for Node.js. From "A Concise Dictionary of Old Icelandic" by Geir Zoëga.
+Old Icelandic dictionary for Node.js. From *"A Concise Dictionary of Old Icelandic"* by Geir Zoëga.
 
 The dictionary consists of 29 000+ Old Icelandic words with English translations.
+
+Related projects:
+- [Old Icelandic Dictionary Website (in Next.js)](https://github.com/stscoundrel/old-icelandic-zoega-next).
+- [Old Icelandic Dictionary Abbreviations](https://github.com/stscoundrel/old-icelandic-zoega-abbreviations).
 
 ### Install
 
@@ -62,4 +66,4 @@ Individual words are returned in format of:
 
 ### About "A Concise Dictionary of Old Icelandic"
 
-"A Concise Dictionary of Old Icelandic" dictionary was published in 1910 by Geir Zoëga, which leads to there being many public domain versions of the book available. Zoëgas attempt was to made easier-to-approach version of the more full Cleasby - Vigfusson dictionary, specifically for beginners and those interested in Old Icelandic prose writing.
+"A Concise Dictionary of Old Icelandic" dictionary was published in 1910 by Geir Zoëga, which leads to there being many public domain versions of the book available. Zoëgas attempt was to made easier-to-approach version of the more full [Cleasby - Vigfusson dictionary](https://github.com/stscoundrel/cleasby-vigfusson-dictionary), specifically for beginners and those interested in Old Icelandic prose writing.
