@@ -1,6 +1,6 @@
 {
   "name": "old-icelandic-zoega",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Old Icelandic dictionary for Node.js. From 'A Concise Dictionary of Old Icelandic' by Geir Zoëga",
   "repository": "https://github.com/stscoundrel/old-icelandic-zoega.git",
   "author": "stscoundrel <silvennoinen.sampo@gmail.com>",
